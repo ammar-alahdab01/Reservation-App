@@ -1,0 +1,92 @@
+.ourFeaturesBoxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 0px 0px 200px 0px;
+}
+
+.ourFeaturesBox {
+  width: 100%;
+  height: 300px;
+  box-shadow: 0 0 15px #ccc;
+  background-color: #fff;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+}
+
+.ourFeaturesBox::before {
+  content: "";
+  position: absolute;
+  top: -200%;
+  left: -200%;
+  background-color: var(--main-color);
+  z-index: -1;
+  height: 200%;
+  width: 200%;
+  transition: var(--time-transition);
+  border-radius: 50%;
+}
+
+.ourFeaturesBox:hover::before {
+  top: -100%;
+  left: -100%;
+}
+
+.ourFeaturesBox::after {
+  content: "";
+  position: absolute;
+  bottom: -200%;
+  right: -200%;
+  background-color: var(--secondary-color);
+  z-index: -2;
+  height: 200%;
+  width: 200%;
+  transition: var(--time-transition);
+  border-radius: 50%;
+}
+
+.ourFeaturesBox:hover::after {
+  bottom: -100%;
+  right: -100%;
+}
+
+.ourFeaturesIcon {
+  font-size: 40px;
+}
+
+.ourFeaturesBox:nth-of-type(1) .ourFeaturesIcon {
+  color: var(--main-color);
+}
+.ourFeaturesBox:nth-of-type(2) .ourFeaturesIcon {
+  color: rgb(20, 141, 20);
+}
+.ourFeaturesBox:nth-of-type(3) .ourFeaturesIcon {
+  color: var(--main-color-light);
+}
+.ourFeaturesBox:nth-of-type(4) .ourFeaturesIcon {
+  color: var(--secondary-color);
+}
+
+.ourFeaturesBox:hover .ourFeaturesIcon {
+  color: var(--secondary-color);
+}
+
+.ourFeaturesBoxTitle {
+  font-size: 20px;
+}
+
+.ourFeaturesBoxText {
+  line-height: 1.5;
+}

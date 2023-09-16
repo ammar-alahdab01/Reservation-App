@@ -1,0 +1,110 @@
+.search {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  border: 2px solid var(--main-color);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+  left: 0;
+}
+
+.searchbox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.boxTitle {
+  font-size: 24px;
+  color: #555;
+  font-weight: 700;
+}
+
+.inputLabel {
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+.inputLabel > span {
+  font-size: 14px;
+}
+
+.searchBar {
+  padding: 15px 10px;
+  outline: none;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+}
+
+.searchBar::placeholder {
+  font-size: 16px;
+}
+
+.dateBar {
+  padding: 15px 10px;
+  background-color: #fff;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dateBoxList {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border: 1px solid #333;
+  transform: translate(-50%, 100%);
+}
+
+.optionsBoxList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.optionsBoxList .optionBoxItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.optionsBoxList .optionBoxItem input {
+  padding: 5px;
+  width: 30%;
+  outline: none;
+  border: none;
+}
+
+.serachButton {
+  width: 100%;
+  background-color: var(--main-color);
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  transition: var(--time-transition);
+  border-radius: 10px;
+}
+
+.serachButton:hover {
+  color: var(--secondary-color);
+}

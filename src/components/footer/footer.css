@@ -1,0 +1,23 @@
+.footer {
+  border-top: 20px solid var(--main-color);
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0px 30px 0px;
+  color: var(--main-color);
+}
+
+.footerlist li {
+  padding: 5px 0px;
+}
+
+.copyRight {
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px 0px;
+  font-size: 14px;
+  color: var(--main-color);
+}

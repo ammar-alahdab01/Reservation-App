@@ -1,0 +1,8 @@
+.ourFeaturesTitle {
+  font-size: 36px;
+  letter-spacing: 3px;
+  color: var(--main-color);
+  width: 100%;
+  text-align: center;
+  margin: 50px 0px;
+}

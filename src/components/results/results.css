@@ -1,0 +1,126 @@
+.result {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.resultCard {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 0 15px #ccc;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.imgResultCardContainer {
+  flex: 2;
+  height: 100%;
+}
+
+.imgResultCard {
+  width: 100%;
+  height: 100%;
+}
+
+.detailsBox {
+  flex: 3;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detailsBoxOne , .detailsBoxTwo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.headerBox , .descAndPrice , .cancellation , .availabilityBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.placeName {
+  font-size: 24px;
+  color: var(--main-color-light);
+}
+
+.placeRating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.textRating {
+  font-size: 18px;
+  color: var(--main-color);
+}
+
+.numberRating {
+  font-size: 18px;
+  color: #fff;
+  background-color: var(--main-color);
+  padding: 5px;
+}
+
+.farAway {
+  font-size: 14px;
+}
+
+.offer {
+  font-size: 14px;
+  color: #fff;
+  padding: 5px;
+  background-color: rgb(20, 141, 20);
+  border-radius: 10px;
+}
+
+.description {
+  color: #333;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.cancel {
+  color: rgb(20, 141, 20);
+  font-weight: 700;
+}
+
+.cancelTax {
+  color: #333;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.availabilityBox p {
+  color: var(--main-color-light);
+  font-size: 12px;
+  font-weight: 700;
+
+}
+
+.availabilityButton {
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  background-color: var(--main-color-light);
+  font-weight: 900;
+  border-radius: 5px;
+}

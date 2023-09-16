@@ -1,0 +1,46 @@
+.navbar {
+  background-color: var(--main-color);
+}
+
+.navbar .container {
+  height: 50px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 900;
+}
+
+.logoColor {
+  color: var(--secondary-color);
+}
+
+.navButton {
+  padding: 5px 10px;
+  margin-left: 20px;
+  transition: var(--time-transition) ease;
+  color: var(--main-color);
+}
+
+.registerButton {
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+.registerButton:hover {
+  color: #fff;
+  background-color: var(--main-color);
+}
+
+.loginButton {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+.loginButton:hover {
+  color: var(--secondary-color);
+  background-color: var(--main-color);
+}

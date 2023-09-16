@@ -1,0 +1,116 @@
+/* Start Variables */
+:root {
+  --main-color: #003580;
+  --main-color-light: #0071c2;
+  --secondary-color: #ffeb3b;
+  --time-transition: 0.3s;
+}
+/* End Variables */
+
+/* Start Global Rules */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+.mainTitle {
+  font-size: 20px;
+  color: var(--main-color);
+  transition: color var(--time-transition) ease-in-out;
+  cursor: pointer;
+  width: fit-content;
+  position: relative;
+  font-weight: bold;
+  text-transform: capitalize;
+  z-index: 1;
+}
+
+/* Start Main Title */
+.mainTitle::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 40%;
+  height: 110%;
+  background-color: var(--secondary-color);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) skewX(15deg);
+  border-radius: 15px;
+  transition: var(--time-transition);
+}
+
+.mainTitle:hover {
+  color: #333;
+}
+
+.mainTitle:hover::before {
+  width: 100%;
+}
+/* End Main Title */
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small Screen */
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    padding: 0px 10px;
+  }
+}
+/* Medium Screen */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Large Screen */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Extra Large Screen */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* Extra Extra large Screen */
+@media (min-width: 1400px) {
+  .container {
+    width: 1340px;
+  }
+}
+
+/* End Global Rules */

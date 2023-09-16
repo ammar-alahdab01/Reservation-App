@@ -1,0 +1,84 @@
+.lovedProperty {
+  padding: 20px 0px;
+  background-color: #fff;
+}
+
+.lovedPropertyContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.lovedPropertyBox {
+  flex: 1;
+  padding: 15px;
+  box-shadow: 0 0 15px #ccc;
+  background-color: #fff;
+  transition: var(--time-transition);
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.lovedPropertyImgContainer {
+  width: 100%;
+  height: 200px;
+}
+
+.lovedPropertyImg {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.lovedPropertyText {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.lovedPropertyName {
+  color: var(--main-color);
+  font-size: 20px;
+}
+
+.lovedPropertyCity {
+  font-weight: 900;
+}
+
+.lovedPropertyPrice {
+  font-style: italic;
+}
+
+.starRating {
+  margin: 5px 0px;
+}
+
+.filled {
+  color: var(--secondary-color);
+}
+
+.lovedPropertyRating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lovedPropertyRating button {
+  padding: 5px 15px;
+  border: none;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 6px;
+}
+
+.lovedPropertyRating span {
+  color: var(--main-color);
+}
