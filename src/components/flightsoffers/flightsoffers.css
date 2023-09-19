@@ -74,7 +74,7 @@
   box-shadow: 0 0 15px #ccc;
   font-size: 18px;
   color: #000;
-  transition: var(--time-transition) ease;
+  transition: .1s ease;
   border-radius: 5px;
 }
 

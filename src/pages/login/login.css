@@ -1,0 +1,168 @@
+.login {
+  width: 100%;
+  height: calc(100vh - 108px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../imgs/pattern/b.png");
+}
+
+.loginBox {
+  background-color: var(--main-color);
+  padding: 30px 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 30px;
+  width: 400px;
+}
+
+.logTitle {
+  color: var(--secondary-color);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px #000;
+}
+
+.logUserInput {
+  width: 100%;
+  position: relative;
+}
+
+.logUserInput input {
+  padding: 10px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 2px solid #006aff;
+  transition: .1s ease;
+  color: var(--secondary-color);
+  position: relative;
+  display: block;
+}
+
+.logUserInput input::placeholder {
+  color: #006aff;
+  letter-spacing: 1px;
+}
+
+.logUserInput input:focus  {
+  border: none;
+  outline: 2px solid #006aff;
+  border-radius: 5px;
+}
+
+.logUserInput input:focus::placeholder  {
+  font-size: 0px;
+}
+
+.logUserInput::before  {
+  content: "Username";
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  color: #006aff;
+  background-color: var(--main-color);
+  padding: 0px 5px;
+  z-index: 2;
+  display: none;
+  letter-spacing: 1px;
+  font-size: 14px;
+  transition: .5s ease;
+}
+
+.logUserInput:focus-within:before {
+  display: block;
+}
+
+.loginBox .logUserInput:nth-child(3)::before{
+  content: "Password";
+} 
+
+.logUserInputCheck {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 10px;
+  color: var(--secondary-color);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px #000;
+}
+
+.loginAndSingUp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.loginAndSingUp::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: #006aff;
+}
+
+.logBtn {
+  color: var(--secondary-color);
+  padding: 5px 30px;
+  font-size: 20px;
+  font-weight: normal;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid #006aff;
+}
+
+.signUpText , 
+.logViaSoicalText {
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px #000;
+}
+
+.singUpLink {
+  color: var(--secondary-color) !important;
+}
+
+.logViaSoical {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.logViaSoicalIconsBox {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.logViaSoicalIcon {
+  color: var(--secondary-color);
+  padding: 5px 30px;
+  font-size: 18px;
+  font-weight: normal;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid #006aff;
+  cursor: pointer;
+}

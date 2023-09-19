@@ -1,8 +1,8 @@
 .SocialIcons {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
+  gap: 10px;
 }
 
 
@@ -29,4 +29,5 @@
   cursor: pointer;
   color: #333;
   transition: var(--time-transition);
+  margin-right: 10px;
 }

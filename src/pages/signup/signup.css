@@ -1,0 +1,124 @@
+.signup {
+  width: 100%;
+  height: calc(100vh - 108px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../imgs/pattern/a.png");
+}
+
+.signupBox {
+  background-color: var(--main-color);
+  padding: 30px 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 30px;
+  width: 400px;
+}
+
+.sigTitle {
+  color: var(--secondary-color);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px #000;
+}
+
+.sigUserInput {
+  width: 100%;
+  position: relative;
+}
+
+.sigUserInput input {
+  padding: 10px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 2px solid #006aff;
+  transition: 0.1s ease;
+  color: var(--secondary-color);
+  position: relative;
+  display: block;
+}
+
+.sigUserInput input::placeholder {
+  color: #006aff;
+  letter-spacing: 1px;
+}
+
+.sigUserInput input:focus {
+  border: none;
+  outline: 2px solid #006aff;
+  border-radius: 5px;
+}
+
+.sigUserInput input:focus::placeholder {
+  font-size: 0px;
+}
+
+.sigUserInput::before {
+  content: "First Name";
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  color: #006aff;
+  background-color: var(--main-color);
+  padding: 0px 5px;
+  z-index: 2;
+  display: none;
+  letter-spacing: 1px;
+  font-size: 14px;
+  transition: 0.5s ease;
+}
+
+.sigUserInput:focus-within:before {
+  display: block;
+}
+
+.signupBox .sigUserInput:nth-child(3)::before {
+  content: "Last Name";
+}
+
+.signupBox .sigUserInput:nth-child(4)::before {
+  content: "Email";
+}
+
+.signupBox .sigUserInput:nth-child(5)::before {
+  content: "Password";
+}
+
+.loginAndSingUP {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.sinBtn {
+  color: var(--secondary-color);
+  padding: 5px 30px;
+  font-size: 20px;
+  font-weight: normal;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid #006aff;
+}
+
+.loginText {
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px #000;
+}
+
+.loginLink {
+  color: var(--secondary-color) !important;
+}

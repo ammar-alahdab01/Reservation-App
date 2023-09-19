@@ -44,7 +44,7 @@ function Header({ type }) {
     {
       startDate: new Date(),
       endDate: new Date(),
-      key: "selection",
+      key: "selection",ws
     },
   ]);
 
@@ -54,7 +54,7 @@ function Header({ type }) {
   const handleSearch = () => {
     navigate("/hotels", { state: { destination, optionBox, date } });
   };
-
+  qq
   const HandleOpneBox = (target) => {
     if (target === "date") {
       setOpenDateBox(!openDateBox);

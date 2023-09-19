@@ -44,3 +44,7 @@
   color: var(--secondary-color);
   background-color: var(--main-color);
 }
+
+.userInfoIcon {
+  margin-right: 5px;
+}
