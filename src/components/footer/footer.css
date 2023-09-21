@@ -4,14 +4,31 @@
 
 .footerContainer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 100px 0px 30px 0px;
   color: var(--main-color);
+  width: 100%;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footerlist {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex: 1;
+  min-height: 150px;
 }
 
 .footerlist li {
   padding: 5px 0px;
+  word-wrap: break-word;
+}
+
+.footerlist li a {
+  word-wrap: break-word;
 }
 
 .copyRight {
@@ -20,4 +37,16 @@
   padding: 10px 0px;
   font-size: 14px;
   color: var(--main-color);
+}
+
+@media (max-width :991px) {
+  .footerlist li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width :480px) {
+  .footerlist li {
+    font-size: 10px;
+  }
 }

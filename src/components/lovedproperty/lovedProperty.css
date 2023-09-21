@@ -1,26 +1,22 @@
 .lovedProperty {
   padding: 20px 0px;
   background-color: #fff;
+ 
 }
 
 .lovedPropertyContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
+  border-left: 1px solid var(--main-color);
+  border-right: 1px solid var(--main-color);
 }
 
 .lovedPropertyBox {
-  flex: 1;
   padding: 15px;
-  box-shadow: 0 0 15px #ccc;
   background-color: #fff;
   transition: var(--time-transition);
-  border-radius: 6px;
-  overflow: hidden;
+  border: 1px solid var(--main-color);
   cursor: pointer;
-  position: relative;
+  border-left: none;
+  min-height: 380px;
 }
 
 .lovedPropertyImgContainer {
@@ -81,4 +77,11 @@
 
 .lovedPropertyRating span {
   color: var(--main-color);
+}
+
+
+@media (max-width: 767px) {
+  .slick-next ,.slick-prev {
+    display: none !important;
+  }
 }

@@ -15,7 +15,7 @@ video {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0 ,0 ,0 , .5);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -35,6 +35,11 @@ video {
   padding: 50px;
   text-align: center;
   z-index: 3;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
 }
 
 .fullScreenVideo .text h2 {
@@ -62,4 +67,20 @@ video {
 .fullScreenVideo .text button:hover {
   color: rgb(0 0 0 / 90%);
   background-color: var(--main-color);
+}
+
+@media (max-width: 575px) {
+  .fullScreenVideo .text h2 {
+    font-size: 16px;
+  }
+  
+  .fullScreenVideo .text p {
+    font-size: 12px;
+  }
+
+  .fullScreenVideo .text button {
+    padding: 5px 20px;
+    font-size: 16px;
+    font-weight: normal;
+  }
 }

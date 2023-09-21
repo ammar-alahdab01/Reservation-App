@@ -1,10 +1,14 @@
 .signup {
   width: 100%;
   height: calc(100vh - 108px);
+  background-image: url("../../imgs/pattern/a.png");
+}
+
+.signup .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../../imgs/pattern/a.png");
+  height: 100%;
 }
 
 .signupBox {
@@ -17,6 +21,13 @@
   flex-direction: column;
   gap: 30px;
   width: 400px;
+}
+
+@media (max-width: 575px) {
+  .signupBox {
+    padding: 30px;
+    width: fit-content;
+  }
 }
 
 .sigTitle {

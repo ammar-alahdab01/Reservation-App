@@ -22,7 +22,7 @@ function FlightsOffers() {
   ]);
   return (
     <div className="flightsOffers">
-      <div class="planeImg">
+      <div className="planeImg">
         <img src={img} alt="plane" />
       </div>
       <div className="FlightsOffersText">

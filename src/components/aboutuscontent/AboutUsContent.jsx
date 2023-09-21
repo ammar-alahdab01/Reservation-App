@@ -19,7 +19,7 @@ function AboutUsContent() {
           assumenda fuga autem cum mollitia.
         </p>
       <div className="AboutUsContentSoical">
-        <SocialIcons/>
+        <SocialIcons className={"aboutSoicalIcon"}/>
       </div>
       </div>
     </div>

@@ -19,10 +19,10 @@ function Home() {
         <h1 className="mainTitle">Browse By Property Type:</h1>
         <PropertyList />
         <h1 className="mainTitle">Home Guests Love:</h1>
-        <LovedProperty />
+      <LovedProperty />
       </div>
       <MailList />
-      <SocialIcons className={"HomeSoicalIcons"}/>
+      <SocialIcons className={"HomeSoicalIcons"} />
       <Footer />
     </div>
   );

@@ -44,7 +44,7 @@ function Header({ type }) {
     {
       startDate: new Date(),
       endDate: new Date(),
-      key: "selection",ws
+      key: "selection",
     },
   ]);
 
@@ -54,14 +54,13 @@ function Header({ type }) {
   const handleSearch = () => {
     navigate("/hotels", { state: { destination, optionBox, date } });
   };
-  qq
-  const HandleOpneBox = (target) => {
-    if (target === "date") {
+  const HandleOpneBox = (e) => {
+    if ([...e.target.classList].includes("date")) {
       setOpenDateBox(!openDateBox);
       if (openOptionBox) {
         setOpenOptionBox(!openOptionBox);
       }
-    } else {
+    } else if ([...e.target.classList].includes("option")) {
       setOpenOptionBox(!openOptionBox);
       if (openDateBox) {
         setOpenDateBox(!openDateBox);
@@ -74,19 +73,19 @@ function Header({ type }) {
       <div className={type === "mini" ? "container miniMode" : "container"}>
         <div className="headerLinks">
           <NavLink to="/" className="headerLinksItem">
-            <FontAwesomeIcon icon={faBed} />
+            <FontAwesomeIcon className="headerLinkIcon" icon={faBed} />
             <span>Stays</span>
           </NavLink>
           <NavLink to="/flights" className="headerLinksItem">
-            <FontAwesomeIcon icon={faPlane} />
+            <FontAwesomeIcon className="headerLinkIcon" icon={faPlane} />
             <span>Flights</span>
           </NavLink>
           <NavLink to="/our-features" className="headerLinksItem">
-            <FontAwesomeIcon icon={faHandHoldingHeart} />
+            <FontAwesomeIcon className="headerLinkIcon" icon={faHandHoldingHeart} />
             <span>Our Features</span>
           </NavLink>
           <NavLink to="/about" className="headerLinksItem">
-            <FontAwesomeIcon icon={faQuestionCircle} />
+            <FontAwesomeIcon className="headerLinkIcon" icon={faQuestionCircle} />
             <span>About Us</span>
           </NavLink>
         </div>
@@ -102,7 +101,7 @@ function Header({ type }) {
               </div>
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
-                <span className="headerSearchText date" onClick={() => HandleOpneBox("date")}>{`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
+                <span className="headerSearchText date" onClick={(e) => HandleOpneBox(e)}>{`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
                   date[0].endDate,
                   "MM/dd/yyyy"
                 )}`}</span>
@@ -112,55 +111,54 @@ function Header({ type }) {
               </div>
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faPerson} className="headerIcon" />
-                <span
-                  className="headerSearchText option"
-                  onClick={() => HandleOpneBox("option")}
-                >{`${optionBox.adult} Adults / ${optionBox.children} Children / ${optionBox.room} Room`}</span>
-                {openOptionBox && (
-                  <div className="optionsBox">
-                    <div className="optionItem">
-                      <span className="optionText">Adult</span>
-                      <div className="optionCounter">
-                        <button className="optionCounterButton" onClick={() => dispatch("decAdult")} disabled={optionBox.adult <= 1}>
-                          -
-                        </button>
-                        <span className="optionCounterNumber">{optionBox.adult}</span>
-                        <button className="optionCounterButton" onClick={() => dispatch("incAdult")}>
-                          +
-                        </button>
+                <div className="headerSearchText option" onClick={(e) => HandleOpneBox(e)}>
+                  {`${optionBox.adult} Adults / ${optionBox.children} Children / ${optionBox.room} Room`}
+                  {openOptionBox && (
+                    <div className="optionsBox">
+                      <div className="optionItem">
+                        <span className="optionText">Adult</span>
+                        <div className="optionCounter">
+                          <button className="optionCounterButton" onClick={() => dispatch("decAdult")} disabled={optionBox.adult <= 1}>
+                            -
+                          </button>
+                          <span className="optionCounterNumber">{optionBox.adult}</span>
+                          <button className="optionCounterButton" onClick={() => dispatch("incAdult")}>
+                            +
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                    <div className="optionItem">
-                      <span className="optionText">Children</span>
-                      <div className="optionCounter">
-                        <button className="optionCounterButton" onClick={() => dispatch("decChildren")} disabled={optionBox.children <= 0}>
-                          -
-                        </button>
-                        <span className="optionCounterNumber">{optionBox.children}</span>
-                        <button className="optionCounterButton" onClick={() => dispatch("incChildren")}>
-                          +
-                        </button>
+                      <div className="optionItem">
+                        <span className="optionText">Children</span>
+                        <div className="optionCounter">
+                          <button className="optionCounterButton" onClick={() => dispatch("decChildren")} disabled={optionBox.children <= 0}>
+                            -
+                          </button>
+                          <span className="optionCounterNumber">{optionBox.children}</span>
+                          <button className="optionCounterButton" onClick={() => dispatch("incChildren")}>
+                            +
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                    <div className="optionItem">
-                      <span className="optionText">Room</span>
-                      <div className="optionCounter">
-                        <button className="optionCounterButton" onClick={() => dispatch("decRoom")} disabled={optionBox.room <= 1}>
-                          -
-                        </button>
-                        <span className="optionCounterNumber">{optionBox.room}</span>
-                        <button className="optionCounterButton" onClick={() => dispatch("incRoom")}>
-                          +
-                        </button>
+                      <div className="optionItem">
+                        <span className="optionText">Room</span>
+                        <div className="optionCounter">
+                          <button className="optionCounterButton" onClick={() => dispatch("decRoom")} disabled={optionBox.room <= 1}>
+                            -
+                          </button>
+                          <span className="optionCounterNumber">{optionBox.room}</span>
+                          <button className="optionCounterButton" onClick={() => dispatch("incRoom")}>
+                            +
+                          </button>
+                        </div>
                       </div>
+                      <button className="resetOptions" onClick={() => dispatch("reset")}>
+                        Reset
+                      </button>
                     </div>
-                    <button className="resetOptions" onClick={() => dispatch("reset")}>
-                      Reset
-                    </button>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
-              <div className="headerSearchItem">
+              <div className="headerSearchItem headerBtn">
                 <button className="headerButton" onClick={handleSearch}>
                   Search
                 </button>

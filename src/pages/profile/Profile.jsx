@@ -19,14 +19,16 @@ function Profile() {
       <Navbar />
       <Header type={"mini"} />
       <div className="profile">
-        <div className="profileBox">
-          <span className="proTitle">Welcome {auth.user}</span>
-          <div className="person">
-            <FontAwesomeIcon className="profileIcon" icon={faUser}/>
-          </div>
+        <div className="container">
+          <div className="profileBox">
+            <span className="proTitle">Welcome {auth.user}</span>
+            <div className="person">
+              <FontAwesomeIcon className="profileIcon" icon={faUser} />
+            </div>
             <button className="logoutBtn" onClick={handleClick}>
               Logout
             </button>
+          </div>
         </div>
       </div>
     </>

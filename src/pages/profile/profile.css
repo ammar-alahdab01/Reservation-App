@@ -1,10 +1,14 @@
 .profile {
   width: 100%;
   height: calc(100vh - 108px);
+  background-image: url("../../imgs/pattern/c.png");
+}
+
+.profile .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../../imgs/pattern/c.png");
+  height: 100%;
 }
 
 .profileBox {
@@ -17,6 +21,13 @@
   flex-direction: column;
   gap: 30px;
   width: 400px;
+}
+
+@media (max-width: 575px) {
+  .profileBox {
+    padding: 30px;
+    width: fit-content;
+  }
 }
 
 .proTitle {

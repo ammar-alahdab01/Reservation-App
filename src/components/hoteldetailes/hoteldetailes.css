@@ -20,6 +20,12 @@
   width: 100%;
 }
 
+@media (max-width: 767px) {
+  .hotelDetaTextBoxes {
+    flex-direction: column;
+  }
+}
+
 .hotelDetailesSlider {
   position: fixed;
   width: 100vw;
@@ -78,13 +84,58 @@
   border: 3px solid var(--secondary-color);
 }
 
+@media (max-width: 991px) {
+  .hotelDetailesSlider .sliderBox img {
+    height: 500px;
+    width:  600px;
+    border: 2px solid var(--secondary-color);
+  }
+  .hotelDetailesSlider .sliderBox .faSlideIcon.left {
+    left: 30px;
+  }
+  
+  .hotelDetailesSlider .sliderBox .faSlideIcon.right {
+    right: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hotelDetailesSlider .sliderBox img {
+    height: 400px;
+    width:  500px;
+    border: 2px solid var(--secondary-color);
+  }
+
+}
+@media (max-width: 575px) {
+  .hotelDetailesSlider .sliderBox img {
+    height: 200px;
+    width:  250px;
+    border: 1px solid var(--secondary-color);
+  }
+  .hotelDetailesSlider .sliderBox .faSlideIcon.left {
+    left: 5px;
+  }
+  
+  .hotelDetailesSlider .sliderBox .faSlideIcon.right {
+    right: 5px;
+  }
+  .hotelDetailesSlider .sliderBox .faSlideIcon {
+    font-size: 24px;
+  }
+}
+
+
 .hotelDetaName {
-  font-size: 24px;
+  font-size: 28px;
   color: var(--main-color);
 }
 
-.btnBox button:first-of-type{
-  margin-right: 20px;
+
+.btnBox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .hotelDetaBookBtn {
@@ -94,6 +145,21 @@
   border-radius: 5px;
   background-color: var(--main-color-light);
   border: none;
+}
+
+@media (max-width: 575px) {
+  .hotelDetaBox {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .hotelDetaBookBtn {
+    font-weight: normal;
+    font-size: 12px;
+}
+  .hotelDetaDescription {
+    font-size: 12px;
+  }
 }
 
 .hotelDetaDescLocation {
@@ -128,6 +194,18 @@
   flex: 30%;
   height: 200px;
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .hotelDetaImgBox {
+    flex: 40%;
+  }
+}
+
+@media (max-width: 575px) {
+  .hotelDetaImgBox {
+    flex: 100%;
+  }
 }
 
 .hotelDetaImgBox > img {

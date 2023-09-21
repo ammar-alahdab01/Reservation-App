@@ -29,6 +29,12 @@
   justify-content: center;
 }
 
+@media (max-width: 767px) {
+  .mailBox {
+    width: 80%;
+  }
+}
+
 .mailBox input {
   border: none;
   outline: none;
@@ -36,6 +42,8 @@
   width: 70%;
   height: 40px;
 }
+
+
 
 .mailBox button {
   border: none;
@@ -57,4 +65,24 @@
   justify-content: flex-start;
   gap: 10px;
 
+}
+
+
+@media (max-width: 575px) {
+  .mailBox {
+    width: 80%;
+  }
+
+  .mailListTitle h1{
+  font-size: 20px;
+  }
+
+  .mailBox button {
+    font-size: 14px;
+    width: fit-content;
+  }
+
+  .checkBox {
+    font-size: 10px;
+  }
 }

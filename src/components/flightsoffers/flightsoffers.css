@@ -36,6 +36,13 @@
   animation: up-and-down 5s linear infinite;
 }
 
+@media (max-width: 991px) {
+  .planeImg img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
 .FlightsOffersText {
   display: flex;
   flex-direction: column;
@@ -52,6 +59,12 @@
   color: var(--main-color);
 }
 
+@media (max-width: 991px) {
+  .FlightsOffersText h1 {
+    font-size: 24px;
+  }
+}
+
 .flightBox {
   width: 100%;
   position: relative;
@@ -64,6 +77,7 @@
 .flightIcons {
   color: var(--main-color-light);
   font-size: 24px;
+  width: 30px;
 }
 
 .flightInput {
@@ -74,7 +88,7 @@
   box-shadow: 0 0 15px #ccc;
   font-size: 18px;
   color: #000;
-  transition: .1s ease;
+  transition: 0.1s ease;
   border-radius: 5px;
 }
 
@@ -84,11 +98,11 @@
   transition: var(--time-transition) ease-in;
 }
 
-.flightInput:focus::placeholder  {
+.flightInput:focus::placeholder {
   font-size: 0px;
 }
 
-.flightInput:focus  {
+.flightInput:focus {
   outline: 3px solid var(--main-color-light);
 }
 
@@ -116,6 +130,25 @@
   border-radius: 5px;
   background-color: var(--main-color-light);
   border: none;
+}
+
+@media (max-width: 767px) {
+  .flightsOffers {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .planeImg {
+    display: none;
+  }
+
+  .FlightsOffersText {
+    width: 90% !important;
+  }
+
+  .flightDate {
+    font-size: 12px;
+  }
 }
 
 @keyframes up-and-down {
